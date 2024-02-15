@@ -1,0 +1,75 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* WebApplication2.styles.css */
+
+/* Styles personnalisés pour la navbar */
+.navbar {
+    background-color: #198754a1; /* Nouvelle couleur de fond mauve */
+    border-bottom: 2px solid #2980b9; /* Bordure inférieure */
+    transition: background-color 0.5s; /* Animation de transition */
+}
+
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #000000 !important; /* Couleur du texte */
+    transition: color 0.5s; /* Animation de transition pour la couleur du texte */
+}
+
+.navbar-toggler-icon {
+    background-color: #fefdff; /* Couleur de l'icône du bouton de bascule */
+    transition: background-color 0.5s; /* Animation de transition pour la couleur de l'icône */
+}
+
+/* Styles pour la couleur au survol */
+.navbar:hover {
+    background-color: #00381dae; /* Nouvelle couleur de fond au survol */
+}
+
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+    color: #808080 !important; /* Nouvelle couleur du texte au survol */
+}
+
+.navbar-toggler-icon:hover {
+    background-color: #b200ff; /* Nouvelle couleur de l'icône au survol */
+}
+
+/* Ajoutez d'autres styles personnalisés selon vos besoins */
+/* Ajoutez ces styles centrés à la navbar */
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .navbar-nav .nav-item {
+        margin: 0 15px; /* Espacement entre les éléments */
+    }
+
+.navbar-collapse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

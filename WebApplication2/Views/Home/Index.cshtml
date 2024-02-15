@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To Store</h1>
+
+    <!-- Ajoutez le carrousel ici -->
+    <div id="imageCarousel" class="carousel slide carousel-container" data-bs-ride="carousel" data-bs-interval="2500">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/HM.jpg" alt="First slide" class="d-block w-100 full-width-image">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/1.png" alt="Second slide" class="d-block w-100 full-width-image">
+            </div>
+            <!-- Ajoutez d'autres images de la même manière -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <h4>To view the Products click <a asp-controller="Products" asp-action="Index">Here</a></h4>
+</div>

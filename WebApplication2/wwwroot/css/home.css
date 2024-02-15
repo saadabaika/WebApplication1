@@ -1,0 +1,10 @@
+﻿namespace WebApplication2.wwwroot.css
+/* Dans votre fichier de style CSS (par exemple, site.css) */
+.full-width-image {
+    width: auto;
+    height: auto; /* Cela maintiendra le ratio d'aspect de l'image */
+}
+.carousel-container {
+    max-width: 800px;
+    margin: auto;
+}
