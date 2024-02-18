@@ -4,45 +4,77 @@
     ViewData["Title"] = "Details";
 }
 
+<style>
+    /* Centrer le contenu */
+    .centered-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Conteneur pour l'image agrandie et les informations */
+    .product-container {
+        display: flex;
+        align-items: center;
+    }
+
+   
+    .enlarged-image {
+        max-width: 400px;
+        max-height: 400px;
+        margin-right: 20px;
+    }
+
+    /* Conteneur pour les informations */
+    .details-container {
+        max-width: 600px;
+    }
+
+        /* Styliser les détails */
+        .details-container h4 {
+            margin-bottom: 10px;
+        }
+
+    /* Styliser le prix */
+    .price {
+        color: #28a745; /* Couleur verte claire, ajustez selon vos préférences */
+        font-weight: bold;
+        font-size: 1.2em; /* Taille de police, ajustez selon vos préférences */
+    }
+</style>
+
 <h1>Details</h1>
 
-<div>
-    <h4>Product</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ProductName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ProductName)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Image)
-        </dt>
-        <dd class="col-sm-10">
-            <img src="~/images/@Model.Image" alt="@Model.ProductName" height="50" width="50" />
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Category.Id)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+<div class="centered-container">
+    <div class="product-container">
+        <img src="~/images/@Model.Image" alt="@Model.ProductName" class="enlarged-image" />
+
+        <div class="details-container">
+            <h4>@Html.DisplayFor(model => model.ProductName)</h4>
+            <hr />
+            <dl class="row">
+
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.ProductName)
+                </dd>
+
+                <dd class="col-sm-8">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+                <dt class="col-sm-4">
+
+                </dt>
+                <dd class="col-sm-8">
+                    @Html.DisplayNameFor(model => model.Price)
+                    <span class="price">@Html.DisplayFor(model => model.Price) DH</span>
+                </dd>
+
+            </dl>
+            <div>
+
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+    </div>
 </div>
